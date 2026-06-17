@@ -104,3 +104,14 @@ Links there omit `.md` extension, e.g. `foo/bar` instead of `foo/bar.md`.
 IMPORTANT! When you asked to provide any report for the user, NEVER write it to scratchpad. Even
 if you used scratchpad to generate such result, ALWAYS copy data that you are supposed to provide to the user
 in project's directory.
+
+
+# Wasm GC backend branch. WILD DEVELOPMENT.
+
+This section is temporary. It was added only in this branch. The new Wasm GC backend is under construction.
+There are a lot of things potentially broken, so:
+
+- Don't run tests on backends other than Wasm GC.
+- By default, only run tests without optimization.
+- There's a small utility, `org.teavm.backend.wasm.disasm.TestComparator`, which we use to compare sizes of 
+  modules against baseline versions (master), per-module (code sections only), per-function.
